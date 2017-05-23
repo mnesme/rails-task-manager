@@ -1,2 +1,16 @@
-<h1>TasksController#new</h1>
-<p>Find me in app/views/tasks_controller/new.html.erb</p>
+<h2>Make a new post</h2>
+
+
+<%= form_for(@task, url: :creation) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit %>
+
+<% end %>
+
+

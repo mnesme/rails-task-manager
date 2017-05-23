@@ -1,5 +1,17 @@
 <h2>Display all tasks</h2>
-<%= @tasks %>
+
+<% @tasks.each do |task| %>
+<p> - - - - - - - - - - - - - - - - - - - -</p>
+<p> <%= task.id %> </p>
+<p> <%= task.name %> </p>
+<p> <%= task.done %> </p>
+<!-- link_to "Voir cette tâche", tasks_controller_path(task)  -->
+
+<p> - - - - - - - - - - - - - - - - - - - -</p>
+<br>
+<% end %>
+
+
 <!--
 Should display a list of all tasks and, for each task:
   a link to its show view (use a link_to helper)
